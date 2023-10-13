@@ -8,7 +8,10 @@
 int main(void)
 {
 	char string[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	for (int i = 0; i < strlen(string); i++)
+	int i;
+	int j = strlen(string);
+
+	for (i = 0; i < j; i++)
 	{
 		putchar(string[i]);
 	}
