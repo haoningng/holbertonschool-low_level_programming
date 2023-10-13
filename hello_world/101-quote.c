@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <string.h>
 /**
  * main - Print a sentence followed by a new line
  *
@@ -8,7 +8,7 @@
 int main(void)
 {
 	char string[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	for (i=0, i<strlen(string),i++)
+	for (int i = 0; i < strlen(string); i++)
 	{
 		putchar(string[i]);
 	}
