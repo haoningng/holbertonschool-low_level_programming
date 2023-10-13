@@ -5,3 +5,4 @@
 4-puts.c - prints exactly ""Programming is like building a multilingual puzzle" followed by a new line and should end with the value 0
 5-printf.c - prints exacrly "with proper grammar, but the outcome is a piece of art," followed by a new line and should end with the value 0
 6-size.c - prints the size of various types on the computer it is compiled and run on
+100-intel - generates the assembly code (intel syntax) of a C code and save it in an output file with extention .s
