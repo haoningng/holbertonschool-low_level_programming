@@ -1,4 +1,3 @@
-#!/bin/bash
 #include <stdio>
 
 int main (void)
