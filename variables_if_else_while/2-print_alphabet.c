@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Entry poitnt
  *
- * Return = 0 if succesful
+ * Return = 0 (Successful)
  */
 int main(void)
 {
@@ -16,6 +16,7 @@ int main(void)
 	{
 		putchar(c);
 		c++;
+		n = c - 'a';
 	}
 	return (0);
 }
