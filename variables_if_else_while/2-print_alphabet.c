@@ -9,6 +9,8 @@ int main(void)
 {
 	char c;
 	int n;
+	int i = 0;
+	char end[] = "\n";
 
 	c = 'a';
 	n = c - 'a';
@@ -18,5 +20,11 @@ int main(void)
 		c++;
 		n = c - 'a';
 	}
+	while (i < 2)
+	{
+		putchar(end[i]);
+		i++;
+	}
+
 	return (0);
 }
