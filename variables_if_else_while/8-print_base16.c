@@ -14,8 +14,6 @@ int main(void)
 	{
 		putchar('0' + n);
 	}
-	putchar('\n');
-
 	c = 'a';
 	n = c - 'a';
 	while (n < 6)
@@ -24,5 +22,6 @@ int main(void)
 		c++;
 		n = c - 'a';
 	}
+	putchar('\n');
 	return (0);
 }
