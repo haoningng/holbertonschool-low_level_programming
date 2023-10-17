@@ -20,7 +20,7 @@ int main(void)
 		c++;
 		n = c - 'a';
 	}
-	while (i < 2)
+	while (i < 1)
 	{
 		putchar(end[i]);
 		i++;
