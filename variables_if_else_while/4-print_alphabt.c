@@ -16,9 +16,12 @@ int main(void)
 	n = c - 'a';
 	while (n < 26)
 	{
-		if (c != 'e' || c != 'q')
+		if (c != 'e')
 		{
-			putchar(c);
+			if (c != 'q')
+			{
+				putchar(c);
+			}
 		}
 		c++;
 		n = c - 'a';
