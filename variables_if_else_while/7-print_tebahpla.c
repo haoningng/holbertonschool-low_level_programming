@@ -14,7 +14,7 @@ int main(void)
 
 	c = 'z';
 	n = c - 'a';
-	while (n != 0)
+	while (n >= 0)
 	{
 		putchar(c);
 		c--;
