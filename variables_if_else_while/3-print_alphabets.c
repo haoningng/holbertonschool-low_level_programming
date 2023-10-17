@@ -21,13 +21,13 @@ int main(void)
 		n = c - 'a';
 	}
 	d = 'A';
-        n = d - 'A';
-        while (n < 26)
-        {
-                putchar(d);
-                d++;
-                n = d - 'A';
-        }
+	n = d - 'A';
+	while (n < 26)
+	{
+		putchar(d);
+		d++;
+		n = d - 'A';
+	}
 	while (i < 1)
 	{
 		putchar(end[i]);
