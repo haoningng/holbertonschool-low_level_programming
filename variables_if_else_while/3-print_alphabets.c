@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char c;
+	char c, d;
 	int n;
 	int i = 0;
 	char end[] = "\n";
