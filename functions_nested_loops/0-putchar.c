@@ -6,7 +6,7 @@
  *
  * Return: 0 If successful
  */
-int main (void)
+int main(void)
 {
 	char n[];
 
