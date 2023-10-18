@@ -6,10 +6,10 @@ NAME = school
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $^ -o $(NAME)
+	$(CC) $? -o $(NAME)
 
 $(OBJ): $(SRC)
-	$(CC) -c $(SRC)
+	$(CC) -c $?
 
 $(SRC):
 	echo "Make a clone from github"
