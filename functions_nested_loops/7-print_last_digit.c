@@ -9,7 +9,8 @@
  */
 int print_last_digit(int i)
 {
-	int last_digit = _abs(i % 10);
+	int xabs_last_digit = i % 10;
+	int last_digit = _abs(xabs_last_digit);
 
 	_putchar('0' + last_digit);
 	return (last_digit);
