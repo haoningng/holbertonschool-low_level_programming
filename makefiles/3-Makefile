@@ -1,0 +1,31 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $^ -o $(NAME)
+
+$(OBJ): $(SRC)
+	$(CC) -c $?
+
+$(SRC):
+	echo "Make a clone from github"
+
+clean:
+	$(RM) -f *~ $(NAME)
+
+oclean:
+	$(RM) -f $(OBJ)
+
+fclean:
+	$(RM) -f *~ $(NAME)
+	$(RM) -f $(OBJ)
+
+re:
+	$(RM) -f $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+	$(CC) -c $(SRC)
