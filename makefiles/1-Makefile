@@ -4,4 +4,4 @@ SRC := *.c
 all: school
 
 school:
-	$(CC) $(SRC) -o school
+	gcc $(SRC) -o school
