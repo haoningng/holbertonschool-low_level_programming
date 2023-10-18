@@ -9,6 +9,7 @@
 int main(void)
 {
 	char n[] = "_putchar";
+
 	printf("%s\n", n);
 	return (0);
 }
