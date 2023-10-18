@@ -8,8 +8,8 @@
  *
  * Return: the absolute value of an integer
  */
-int _abs(int)
+int _abs(int i)
 {
-	return (abs(int));
+	return (abs(int i));
 }
 
