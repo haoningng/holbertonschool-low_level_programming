@@ -27,7 +27,7 @@ int main(void)
 				}
 				while (d < 10)
 				{
-					if ((a + b) != (c + d))
+					if (true)
 					{
 						putchar('0' + a);
 						putchar('0' + b);
