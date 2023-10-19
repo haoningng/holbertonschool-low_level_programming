@@ -22,8 +22,8 @@ int main(void)
 		}
 		else
 		{
-			_putchar('0' + i);
-			_putchar(' ');
+			putchar('0' + i);
+			putchar(' ');
 		}
 	}
 }
