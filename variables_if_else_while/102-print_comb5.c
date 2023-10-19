@@ -14,7 +14,14 @@ int main(void)
 		b = 0;
 		while (b < 10)
 		{
-			c = 0;
+			if (a > 0)
+			{
+				c = a;
+			}
+			else
+			{
+				c = 0;
+			}
 			while (c < 10)
 			{
 				if (b > 0 && c == 0)
