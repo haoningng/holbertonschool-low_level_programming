@@ -15,7 +15,7 @@ int main(void)
 		{
 			while (c < 10)
 			{
-				d = c + 1;
+				d = 0;
 				while (d < 10)
 				{
 					if ((a + b) != (c + d) && c != d)
