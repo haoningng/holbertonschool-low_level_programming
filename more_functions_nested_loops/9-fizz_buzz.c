@@ -15,11 +15,11 @@ int main(void)
 	for (i = 1; i < 101; i++)
 	{
 		if (i < 100)
-			print();
+			print(i);
 			printf(" ");
 		else
 		{
-			print();
+			print(i);
 		}
 	}
 	printf("\n");
