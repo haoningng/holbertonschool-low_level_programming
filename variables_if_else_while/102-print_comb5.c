@@ -19,7 +19,7 @@ int main(void)
 			{
 				if (b > 0 && c == 0)
 				{
-					d = 1;
+					d = b + 1;
 				}
 				else
 				{
