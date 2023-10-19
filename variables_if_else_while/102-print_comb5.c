@@ -24,7 +24,7 @@ int main(void)
 			}
 			while (c < 10)
 			{
-				if (b > 0 && c == 0)
+				if (b > 0)
 				{
 					d = b;
 				}
