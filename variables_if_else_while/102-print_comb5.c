@@ -27,7 +27,7 @@ int main(void)
 				}
 				while (d < 10)
 				{
-					if (1 == 1)
+					if (!(a == c && b == d))
 					{
 						putchar('0' + a);
 						putchar('0' + b);
