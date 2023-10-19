@@ -8,18 +8,19 @@
  */
 void print_triangle(int size)
 {
-	int i, j, k, space;
+	int i, j, k, space, block;
 
 	if (size > 0)
 	{
 		for (i = 0; i < size; i++)
 		{
 			space = size - (i + 1);
+			block++;
 			for (k = 0; k < space; k++)
 			{
 				_putchar(' ');
 			}
-			for (j = 0; j < size; j++)
+			for (j = 0; j < block; j++)
 			{
 				_putchar('#');
 			}
