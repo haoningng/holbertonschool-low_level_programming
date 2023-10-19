@@ -30,7 +30,7 @@ int main(void)
 				}
 				else if (a > 0 && b > 0 && c == 1)
 				{
-					d = c + 1;
+					d = b;
 				}
 				else
 				{
