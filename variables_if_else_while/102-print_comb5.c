@@ -11,11 +11,20 @@ int main(void)
 
 	while (a < 8)
 	{
+		b = 0;
 		while (b < 10)
 		{
+			c = 0;
 			while (c < 10)
 			{
-				d = 0;
+				if (b > 0)
+				{
+					d = b + 1;
+				}
+				else
+				{
+					d = 0;
+				}
 				while (d < 10)
 				{
 					if ((a + b) != (c + d))
