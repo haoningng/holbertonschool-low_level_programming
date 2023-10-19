@@ -7,14 +7,19 @@
  */
 void more_numbers(void)
 {
-	int num = 0, times = 0;
+	int num = 0, times = 0, last_digit = num % 10;
 
 	while (times < 10)
 	{
 		while (num < 15)
 		{
-			_putchar('0' + num);
+			if (num > 9)
+			{
+				_putchar('0' + 1);
+			}
+			_putchar('0' + last_digit);
 			num++;
+			last_digit = num % 10;
 		}
 		_putchar('\n');
 		times++;
