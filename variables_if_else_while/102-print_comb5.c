@@ -20,7 +20,7 @@ int main(void)
 				d = c + 1;
 				while (d < 10)
 				{
-					if (b != a && c != a && b != c)
+					if (a != c && b != d && c != d)
 					{
 						putchar('0' + a);
 						putchar('0' + b);
