@@ -18,7 +18,7 @@ int main(void)
 				d = 0;
 				while (d < 10)
 				{
-					if ((a + b) != (c + d) && c != d)
+					if ((a + b) != (c + d))
 					{
 						putchar('0' + a);
 						putchar('0' + b);
