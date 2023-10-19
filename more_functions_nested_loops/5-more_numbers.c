@@ -7,10 +7,13 @@
  */
 void more_numbers(void)
 {
-	int num = 0, times = 0, last_digit = num % 10;
+	int num, times, last_digit;
 
+	times = 0;
 	while (times < 10)
 	{
+		num = 0;
+		last_digit = num % 10;
 		while (num < 15)
 		{
 			if (num > 9)
