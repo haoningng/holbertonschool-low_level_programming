@@ -28,7 +28,7 @@ int main(void)
 				{
 					d = b;
 				}
-				else if (a > 0 && b > 0 && c == 1)
+				else if (a > 0 && b > 0 && c > 0)
 				{
 					d = b;
 				}
