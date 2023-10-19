@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -16,8 +16,8 @@ int main (void)
 		{
 			if (b != a)
 			{
-				_putchar('0' + a);
-				_putchar('0' + b);
+				putchar('0' + a);
+				putchar('0' + b);
 			}
 			b++;
 		}
