@@ -14,7 +14,7 @@ int main(void)
 		b = a + 1;
 		while (b < 10)
 		{
-			c = b + 1;
+			c = a + 1;
 			while (c < 10)
 			{
 				d = c + 1;
