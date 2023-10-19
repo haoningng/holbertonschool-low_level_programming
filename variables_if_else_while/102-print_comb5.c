@@ -26,7 +26,7 @@ int main(void)
 			{
 				if (b > 0 && c == 0)
 				{
-					d = b + 1;
+					d = b;
 				}
 				else if (a > 0 && b > 0 && c == 1)
 				{
