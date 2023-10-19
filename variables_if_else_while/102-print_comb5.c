@@ -28,6 +28,10 @@ int main(void)
 				{
 					d = b + 1;
 				}
+				else if (b > 0 && c > 0)
+				{
+					d = c + 1;
+				}
 				else
 				{
 					d = 0;
