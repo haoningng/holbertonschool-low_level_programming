@@ -7,17 +7,14 @@
  */
 int main(void)
 {
-	int a = 0, b = -1, c = -1, d;
+	int a = 0, b = 0, c = 0, d = 1;
 
 	while (a < 8)
 	{
-		b = a + 1;
 		while (b < 10)
 		{
-			c = a + 1;
 			while (c < 10)
 			{
-				d = c + 1;
 				while (d < 10)
 				{
 					if (a != c && b != d && c != d)
