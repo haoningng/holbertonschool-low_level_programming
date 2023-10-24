@@ -12,7 +12,6 @@
 int _atoi(char *s)
 {
 	int len, i, j, integer;
-	char str[100];
 
 	j = 0;
 	len = strlen(s);
@@ -20,10 +19,11 @@ int _atoi(char *s)
 	{
 		if ((s[i] - 'A') < 27 || (s[i] - 'a') < 27)
 		{
-			str[j] = s[i];
+			s[j] = s[i];
 			j++;
 		}
-		integer = atoi(str);
+		s[j] = '\0';
+		integer = atoi(s);
 	}
 	return (integer);
 }
