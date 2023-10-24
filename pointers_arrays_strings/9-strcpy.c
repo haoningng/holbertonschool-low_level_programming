@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <main.h>
+#include "main.h"
 
 /**
  * _strcpy - copies the string from src to dest
