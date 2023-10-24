@@ -11,7 +11,7 @@
  */
 int _atoi(char *s)
 {
-	int len, i, j, integer;
+	int len, i, j;
 
 	j = 0;
 	len = strlen(s);
@@ -23,7 +23,6 @@ int _atoi(char *s)
 			j++;
 		}
 		s[j] = '\0';
-		integer = atoi(s);
 	}
-	return (integer);
+	return (s);
 }
