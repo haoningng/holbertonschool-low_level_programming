@@ -10,14 +10,14 @@
  *
  * Return: Copied string
  */
-char *_strcpy(char *dest, char *str)
+char *_strcpy(char *dest, char *src)
 {
 	int len, i;
 
-	len = strlen(str);
+	len = strlen(src) + 1;
 	for (i = 0; i < len; i++)
 	{
-		dest[i] = str[i];
+		dest[i] = src[i];
 	}
 	return (dest);
 }
