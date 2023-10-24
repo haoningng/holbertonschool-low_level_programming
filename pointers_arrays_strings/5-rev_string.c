@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 /**
@@ -12,10 +13,9 @@ void rev_string(char *s)
 {
 	int i, j;
 
-	j = strlen(s);
+	char *str;
 
-	char str[j];
-
+	str = malloc(sizeof(char) * (strlen(s) + 1));
 	i = 0;
 	j = strlen(s);
 	for (i = 0; i < j; i++)
@@ -23,4 +23,5 @@ void rev_string(char *s)
 		str[i] = s[j - (i + 1)];
 	}
 	strcpy(s, str);
+	free(str);
 }
