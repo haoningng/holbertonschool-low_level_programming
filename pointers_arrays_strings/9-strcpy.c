@@ -12,6 +12,12 @@
  */
 char *_strcpy(char *dest, char *str)
 {
-	strcpy(dest, str);
+	int len, i;
+
+	len = strlen(str);
+	for (i = 0; i < len; i++)
+	{
+		dest[i] = str[i];
+	}
 	return (dest);
 }
