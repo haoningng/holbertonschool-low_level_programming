@@ -17,7 +17,7 @@ int _atoi(char *s)
 	len = strlen(s);
 	for (i = 0; i < len; i++)
 	{
-		if ((s[i] - 'A') < 27 || (s[i] - 'a') < 27)
+		if ((s[i] - '0') < 58)
 		{
 			s[j] = s[i];
 			j++;
