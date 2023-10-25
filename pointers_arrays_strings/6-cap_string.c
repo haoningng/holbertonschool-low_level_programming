@@ -1,3 +1,4 @@
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -18,7 +19,7 @@ char *cap_string(char *str)
 	{
 		if (j == 0)
 		{
-			if (*(str + i) <= 'z' && *(str + i) >= 'a')
+			if (islower(*(str + i)))
 			{
 				*(str + i) -= 32;
 			}
