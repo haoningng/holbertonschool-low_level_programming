@@ -35,7 +35,7 @@ char *cap_string(char *str)
 				}
 				else if (islower(*(str + i)))
 				{
-					if ((str - 1) == '6')
+					if (_atoi((str - 1)) == '6')
 					{
 						break;
 					}
