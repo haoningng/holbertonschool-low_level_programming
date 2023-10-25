@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "main.h"
 
 /**
  * cap_string - capitalizes all words of a string
@@ -36,7 +35,7 @@ char *cap_string(char *str)
 				}
 				else if (islower(*(str + i)))
 				{
-					if (_atoi((str - 1)) == '6')
+					if (atoi((str - 1)) == '6')
 					{
 						break;
 					}
