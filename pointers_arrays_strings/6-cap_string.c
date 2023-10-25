@@ -35,7 +35,7 @@ char *cap_string(char *str)
 				}
 				else if (*(str + i) <= 'z' && *(str + i) >= 'a')
 				{
-					*(str + i) -= 32;
+					*(str + i) -= 31;
 				}
 				else
 				{
