@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "main.h"
 
@@ -6,29 +8,23 @@
  * @dest: destination string
  * @src: source string
  *
- * Return: Resulting destination string
+ * Return: destination string
  */
 char *_strcat(char *dest, char *src)
 {
-	int len_s, len_d, new_len;
-	char *new_string;
+	int i, j;
 
-	len_d = strlen(dest);
-	len_s = strlen(src);
-	new_len = len_d + len_s;
-	while (*dest)
+	i = j = 0;
+	while (dest[i] != '\0')
 	{
-		*new_string = *dest;
-		new_string++;
-		dest++;
+		i++;
 	}
-	while (*src)
+	while (src[j] != '\0')
 	{
-		*new_string = *src;
-		new_string++;
-		src++;
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	*(new_string + new_len) = '\0';
-	strcpy(dest, new_string);
-	return (new_string);
+	dest[i] = '\0';
+	return (dest);
 }
