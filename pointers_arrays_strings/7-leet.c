@@ -7,12 +7,13 @@
 char *leet(char *str)
 {
 	int i;
+	char *new_str = str;
 	char a[] = {'a', 'e', 'o', 't', 'l'};
 	char b[] = {'4', '3', '0', '7', '1'};
 
 	while (*str)
 	{
-		
+
 		for (i = 0; i < 5; i++)
 		{
 			if (*str == a[i] || *str == (a[i] - 32))
@@ -22,5 +23,5 @@ char *leet(char *str)
 		}
 		str++;
 	}
-	return (str);
+	return (new_str);
 }
