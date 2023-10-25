@@ -35,8 +35,7 @@ char *cap_string(char *str)
 				}
 				else if (islower(*(str + i)))
 				{
-					printf("%s\n", (str - 1));
-					if (atoi((str - 1)) >= 0 && atoi((str - 1)) <= 9)
+					if ((*(str - 1)) >= 0 && (*(str - 1)) <= 9)
 					{
 						break;
 					}
