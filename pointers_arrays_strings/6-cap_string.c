@@ -15,8 +15,8 @@ char *cap_string(char *str)
 	len = strlen(str);
 	while (*str)
 	{
-		if (!((*str <= 'z' && *str >= 'a') || (*str <= 'Z' && *str >= 'A') ||
-				       	(*str <= '9' && *str >= '0')))
+		if (!((*str <= 'z' && *str >= 'a') || (*str <= 'Z' && *str >= 'A') || 
+		(*str <= '9' && *str >= '0')))
 		{
 			i = 0;
 			while (*str)
