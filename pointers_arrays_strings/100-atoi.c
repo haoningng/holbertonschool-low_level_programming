@@ -3,8 +3,6 @@
 #include <string.h>
 #include "main.h"
 
-char *delete(char *s, int pos);
-
 /**
  * _atoi - converts a string to an integer
  * @s: string
@@ -13,38 +11,25 @@ char *delete(char *s, int pos);
  */
 int _atoi(char *s)
 {
-	int integer;
+	int minus_count, integer;
 
-	if ((s[0] - '0') < 10 && ((s[0] - '0') > 0))
+	minus_count = integer = 0;
+	while (*s)
 	{
-		integer = atoi(s);
-	}
-	else
-	{
-		while (!((s[0] - '0') < 10 && !((s[0] - '0') > 0)))
-		{
-			delete(s, 0);
+		if (*s <= '9' && *s >= '0')
+		{	
+			/* move position to next position, + integer value of char */
+			integer = integer * 10 + (*s - '0');
 		}
-		integer = atoi(s);
+		else if (*s == '-')
+		{
+			minus_count++;
+		}
+		s++;
+	}
+	if (minus_count % 2 != 0)
+	{
+		integer = integer * -1;
 	}
 	return (integer);
-}
-
-/**
- * delete - deletes the first element of the string
- * @s: the string
- * @pos: the position of element to be deleted
- *
- * Return: the new string
- */
-char *delete(char *s, int pos)
-{
-	int i, len;
-
-	len = strlen(s);
-	for (i = pos; i < len - 1; i++)
-	{
-		s[i] = s[i + 1];
-	}
-	return(s);
 }
