@@ -10,6 +10,9 @@
  */
 char *string_toupper(char *str)
 {
+	int len;
+
+	len = strlen(str);
 	while (*str)
 	{
 		if (*str < 'a')
@@ -22,6 +25,6 @@ char *string_toupper(char *str)
 		}
 		str++;
 	}
-	str = str - 3;
+	str = str - len;
 	return (str);
 }
