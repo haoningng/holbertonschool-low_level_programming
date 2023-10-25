@@ -10,13 +10,10 @@
  */
 char *string_toupper(char *str)
 {
-	int i;
-
-	i = 0;
 	while (*str)
 	{
 		*str = *str - 32;
-		i++;
+		str++;
 	}
 	return (str);
 }
