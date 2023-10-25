@@ -15,7 +15,7 @@ int _atoi(char *s)
 {
 	int integer;
 
-	if ((s[0] - '0') < 10 && !((s[0] - '0') > 0))
+	if ((s[0] - '0') < 10 && ((s[0] - '0') > 0))
 	{
 		integer = atoi(s);
 	}
@@ -30,6 +30,13 @@ int _atoi(char *s)
 	return (integer);
 }
 
+/**
+ * delete - deletes the first element of the string
+ * @s: the string
+ * @pos: the position of element to be deleted
+ *
+ * Return: the new string
+ */
 char *delete(char *s, int pos)
 {
 	int i, len;
