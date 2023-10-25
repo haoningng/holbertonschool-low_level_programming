@@ -22,6 +22,6 @@ char *string_toupper(char *str)
 		}
 		str++;
 	}
-	printf("%s\n", str);
+	str = -3;
 	return (str);
 }
