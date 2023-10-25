@@ -15,7 +15,7 @@ int _atoi(char *s)
 {
 	int integer;
 
-	if ((s[0] - '0') < 10)
+	if ((s[0] - '0') < 10 && !((s[0] - '0') > 0))
 	{
 		integer = atoi(s);
 	}
