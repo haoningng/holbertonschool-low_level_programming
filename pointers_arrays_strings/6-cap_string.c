@@ -29,13 +29,13 @@ char *cap_string(char *str)
 			i = 0;
 			while (*str)
 			{
-				if (*(str + i) <= 'Z' && *(str + i) >= 'A')
+				if (isupper(*(str + i)))
 				{
 					break;
 				}
-				else if (*(str + i) <= 'z' && *(str + i) >= 'a')
+				else if (islower(*(str + i)))
 				{
-					if (str[j - 1] == '6')
+					if ((str - 1) == '6')
 					{
 						break;
 					}
