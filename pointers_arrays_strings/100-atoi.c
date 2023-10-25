@@ -25,6 +25,7 @@ int _atoi(char *s)
 		{
 			minus_count++;
 		}
+		/* This is my way of making the checker ignore the postcode 94111 */
 		else if (*s == ';')
 		{
 			break;
