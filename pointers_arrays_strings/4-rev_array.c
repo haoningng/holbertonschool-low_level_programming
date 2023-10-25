@@ -26,5 +26,5 @@ void reverse_array(int *a, int n)
 		a[i] = new_a[i];
 	}
 
-	free(new_a);;
+	free(new_a);
 }
