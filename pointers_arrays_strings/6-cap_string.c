@@ -19,12 +19,12 @@ char *cap_string(char *str)
 	{
 		if (j == 0)
 		{
-			if (islower(*(str + i)))
+			if (islower(*(str)))
 			{
-				*(str + i) -= 32;
+				*(str) -= 32;
 			}
 		}
-		else if (!((*str <= 'z' && *str >= 'a') || (*str <= 'Z' && *str >= 'A') ||
+		else if (!(isupper(*str) || islower(*str)||
 			(*str == '6') || (*str == '0') || (*str == '1') || (*str == '2') ||
 			(*str == '3') || (*str == '4') || (*str == '5') || (*str == '-')))
 		{
