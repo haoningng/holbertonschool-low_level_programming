@@ -13,6 +13,29 @@ int _atoi(char *s)
 {
 	int integer;
 
-	integer = atoi(s);
+	if ((s[0] - '0') < 10)
+	{
+		integer = atoi(s);
+	}
+	else
+	{
+		while (!((s[0] - '0') < 10))
+		{
+			delete(s, i);
+		}
+		integer = atoi(s);
+	}
 	return (integer);
+}
+
+char *delete(char *s, int pos)
+{
+	int i, len;
+
+	len = strlen(s);
+	for (i = pos - 1; i < len - 1; i++)
+	{
+		s[i] = s[i + 1];
+	}
+	return(s);
 }
