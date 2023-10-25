@@ -15,12 +15,12 @@ char *cap_string(char *str)
 	{
 		if (!((*str <= 'z' && *str >= 'a') || (*str <= 'Z' && *str >= 'A')))
 		{
-			i = 0;
+			i = 1;
 			while (!(*(str + i) <= 'z' && *(str + i) >= 'a'))
 			{
 				i++;
 			}
-			*(str + 1) -= 32;
+			*(str + i) -= 32;
 		}
 		str++;
 	}
