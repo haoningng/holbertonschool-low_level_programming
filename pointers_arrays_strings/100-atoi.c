@@ -11,19 +11,23 @@
  */
 int _atoi(char *s)
 {
-	int minus_count, integer;
+	unsigned int minus_count, integer;
 
 	minus_count = integer = 0;
 	while (*s)
 	{
 		if (*s <= '9' && *s >= '0')
-		{	
+		{
 			/* move position to next position, + integer value of char */
 			integer = integer * 10 + (*s - '0');
 		}
 		else if (*s == '-')
 		{
 			minus_count++;
+		}
+		else if (*s == ';')
+		{
+			break;
 		}
 		s++;
 	}
