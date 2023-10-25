@@ -11,11 +11,19 @@
 char *cap_string(char *str)
 {
 	int i, len;
-
+	
+	i = 0;
 	len = strlen(str);
 	while (*str)
 	{
-		if (!((*str <= 'z' && *str >= 'a') || (*str <= 'Z' && *str >= 'A') || 
+		if (i == 0)
+		{
+			if (*(str + i) <= 'z' && *(str + i) >= 'a')
+			{
+				*(str + i) -= 32;
+			}
+		}
+		else if (!((*str <= 'z' && *str >= 'a') || (*str <= 'Z' && *str >= 'A') || 
 		(*str <= '9' && *str >= '0')))
 		{
 			i = 0;
