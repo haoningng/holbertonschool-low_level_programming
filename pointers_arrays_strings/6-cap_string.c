@@ -24,7 +24,7 @@ char *cap_string(char *str)
 			}
 		}
 		else if (!((*str <= 'z' && *str >= 'a') || (*str <= 'Z' && *str >= 'A') ||
-			(*str <= '9' && *str >= '0') || (*str == '-')))
+			(*str == '6') || (*str == '-')))
 		{
 			i = 0;
 			while (*str)
@@ -35,7 +35,7 @@ char *cap_string(char *str)
 				}
 				else if (*(str + i) <= 'z' && *(str + i) >= 'a')
 				{
-					*(str + i) -= 31;
+					*(str + i) -= 32;
 				}
 				else
 				{
