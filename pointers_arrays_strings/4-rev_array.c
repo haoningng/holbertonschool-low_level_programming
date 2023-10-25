@@ -8,7 +8,7 @@
  *
  * Return: Nothing.
  */
-void *reverse_array(int *a, int n)
+void reverse_array(int *a, int n)
 {
 	int i, len;
 	int *new_a = malloc(sizeof(int) * n);
@@ -31,7 +31,5 @@ void *reverse_array(int *a, int n)
 		a[i] = new_a[i];
 	}
 
-	free(new_a);
-
-	return void;
+	free(new_a);;
 }
