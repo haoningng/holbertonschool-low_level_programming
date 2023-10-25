@@ -22,6 +22,6 @@ char *string_toupper(char *str)
 		}
 		str++;
 	}
-	str = -3;
+	str = str - 3;
 	return (str);
 }
