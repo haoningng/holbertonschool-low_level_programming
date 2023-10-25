@@ -35,7 +35,7 @@ char *cap_string(char *str)
 				}
 				else if (islower(*(str + i)))
 				{
-					if (isdgit(*(str - 1)))
+					if (isdigit(*(str - 1)))
 					{
 						break;
 					}
