@@ -24,7 +24,7 @@ char *cap_string(char *str)
 			}
 		}
 		else if (!((*str <= 'z' && *str >= 'a') || (*str <= 'Z' && *str >= 'A') ||
-		 (*str <= '6' && *str >= '0') || (*str == '-')))
+		(*str <= '6' && *str >= '0') || (*str == '-')))
 		{
 			i = 0;
 			while (*str)
