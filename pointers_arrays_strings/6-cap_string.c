@@ -20,7 +20,7 @@ char *cap_string(char *str)
 			{
 				i++;
 			}
-			*(str + i) -= 32;
+			*(str + 1) -= 32;
 		}
 		str++;
 	}
