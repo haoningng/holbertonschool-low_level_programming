@@ -3,6 +3,8 @@
 #include <string.h>
 #include "main.h"
 
+char *delete(char *s, int pos);
+
 /**
  * _atoi - converts a string to an integer
  * @s: string
@@ -21,7 +23,7 @@ int _atoi(char *s)
 	{
 		while (!((s[0] - '0') < 10))
 		{
-			delete(s, i);
+			delete(s, 0);
 		}
 		integer = atoi(s);
 	}
@@ -33,7 +35,7 @@ char *delete(char *s, int pos)
 	int i, len;
 
 	len = strlen(s);
-	for (i = pos - 1; i < len - 1; i++)
+	for (i = pos; i < len - 1; i++)
 	{
 		s[i] = s[i + 1];
 	}
