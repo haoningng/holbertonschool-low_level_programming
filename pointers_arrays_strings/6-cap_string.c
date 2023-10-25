@@ -13,10 +13,10 @@ char *cap_string(char *str)
 
 	while (*str)
 	{
-		if (!(*str <= 'z' || *str >= 'a' || *str <= 'Z' || *str >= 'A'))
+		if (!((*str <= 'z' && *str >= 'a') || (*str <= 'Z' && *str >= 'A')))
 		{
 			i = 0;
-			while (!(*(str + i) <= 'z' || *(str + i) >= 'a'))
+			while (!(*(str + i) <= 'z' && *(str + i) >= 'a'))
 			{
 				i++;
 			}
