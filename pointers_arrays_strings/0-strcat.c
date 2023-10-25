@@ -22,7 +22,6 @@ char *_strcat(char *dest, char *src)
 		new_string++;
 		dest++;
 	}
-	dest = dest + len_d;
 	while (*src)
 	{
 		*new_string = *src;
