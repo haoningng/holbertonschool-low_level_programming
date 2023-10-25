@@ -24,9 +24,7 @@ char *cap_string(char *str)
 				*(str) -= 32;
 			}
 		}
-		else if (!(isupper(*str) || islower(*str)||
-			(*str == '6') || (*str == '0') || (*str == '1') || (*str == '2') ||
-			(*str == '3') || (*str == '4') || (*str == '5') || (*str == '-')))
+		else if (!(isupper(*str) || islower(*str) || (*str (*str == '-'))))
 		{
 			i = 0;
 			while (*str)
