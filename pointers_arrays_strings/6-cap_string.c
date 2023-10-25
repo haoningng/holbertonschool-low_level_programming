@@ -24,7 +24,7 @@ char *cap_string(char *str)
 				*(str) -= 32;
 			}
 		}
-		else if (!(isupper(*str) || islower(*str) || (*str == '-'))) 
+		else if (!(isupper(*str) || islower(*str) || (*str == '-') || isdigit(atoi(str)))) 
 		{
 			i = 0;
 			while (*str) 
@@ -35,7 +35,6 @@ char *cap_string(char *str)
 				}
 				else if (islower(*(str + i)))
 				{
-					printf("%c\n", *(str - 1));
 					if ((*(str - 1)) >= 0 && (*(str - 1)) <= 9)
 					{
 						break;
