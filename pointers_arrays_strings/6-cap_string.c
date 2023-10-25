@@ -35,7 +35,7 @@ char *cap_string(char *str)
 				}
 				else if (islower(*(str + i)))
 				{
-					if ((*(str - 1)) >= 0 && (*(str - 1)) <= 9)
+					if (isdgit(*(str - 1)))
 					{
 						break;
 					}
