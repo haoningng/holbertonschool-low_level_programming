@@ -10,9 +10,8 @@
  */
 char *string_toupper(char *str)
 {
-	int len, i;
+	int i;
 
-	len = strlen(str);
 	i = 0;
 	while (*str)
 	{
