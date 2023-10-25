@@ -10,13 +10,13 @@
  */
 char *cap_string(char *str)
 {
-	int i, len;
+	int i, j, len;
 
-	i = 0;
+	j = 0;
 	len = strlen(str);
 	while (*str)
 	{
-		if (i == 0)
+		if (j == 0)
 		{
 			if (*(str + i) <= 'z' && *(str + i) >= 'a')
 			{
@@ -43,6 +43,7 @@ char *cap_string(char *str)
 				}
 			}
 		}
+		j++;
 		str++;
 	}
 	str = str - len;
