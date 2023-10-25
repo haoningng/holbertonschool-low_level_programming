@@ -33,5 +33,5 @@ void *reverse_array(int *a, int n)
 
 	free(new_a);
 
-	return;
+	return void;
 }
