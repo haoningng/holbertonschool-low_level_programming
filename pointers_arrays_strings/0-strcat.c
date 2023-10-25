@@ -22,12 +22,16 @@ char *_strcat(char *dest, char *src)
 		new_string++;
 		dest++;
 	}
+	dest = dest + len_d;
 	while (*src)
 	{
 		*new_string = *src;
+		*dest = *src;
 		new_string++;
 		src++;
+		dest++;
 	}
 	*(new_string + new_len) = '0';
+	*(dest + new_len) = '0';
 	return (new_string);
 }
