@@ -1,5 +1,5 @@
 /**
- * _strchar - locates a character in a string
+ * _strchr - locates a character in a string
  * @s: string to be examined
  * @c: character to be located
  *
@@ -13,6 +13,7 @@ char *_strchr(char *s, char c)
 		{
 			break;
 		}
+		s++;
 	}
 	return (s);
 }
