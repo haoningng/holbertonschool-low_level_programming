@@ -16,11 +16,7 @@ int _strcmp(char *s1, char *s2)
 	while (true)
 	{
 		difference = *s1 - *s2;
-		if (difference > 0)
-		{
-			return (difference);
-		}
-		else if (difference < 0)
+		if (difference != 0)
 		{
 			return (difference);
 		}
