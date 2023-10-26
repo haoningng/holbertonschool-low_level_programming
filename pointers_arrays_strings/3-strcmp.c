@@ -10,7 +10,7 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	while (*s2)
+	while (TRUE)
 	{
 		while (*s1 == *s2)
 		{
