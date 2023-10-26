@@ -11,41 +11,26 @@
  */
 char *cap_string(char *str)
 {
-	int i, j, len;
+	int i, cap;
+	char separators[] = {' ', '\t', '\n', ',', ':', '.', '!', '?', '"', '(', ')', '{', '}'}
+	char *new_str = str;
 
-	j = 0;
-	len = strlen(str);
+	cap = 1;
 	while (*str)
 	{
-		if (j == 0)
+		if (cap && islower(*str))
 		{
-			if (islower(*(str)))
+			*(str) -= 32;
+		}
+		cap = 0;
+		for (i = 0; i < 13; i++)
+		{
+			if (*str == separators[i])
 			{
-				*(str) -= 32;
+				cap = 1;
 			}
 		}
-		else if (!(isupper(*str) || islower(*str) || (*str == '-')))
-		{
-			i = 0;
-			while (*str)
-			{
-				if (isupper(*(str + i)))
-				{
-					break;
-				}
-				else if (islower(*(str + i)))
-				{
-					*(str + i) -= 32;
-				}
-				else
-				{
-					i++;
-				}
-			}
-		}
-		j++;
 		str++;
 	}
-	str = str - len;
-	return (str);
+	return (new_str);
 }
