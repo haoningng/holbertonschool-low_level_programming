@@ -8,7 +8,7 @@
  *
  * Return: pointer to the byte in s that matches bytes in accept/ NULL if nil
  */
-char * _strpbrk(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 	int i;
 	int len = strlen(accept);
