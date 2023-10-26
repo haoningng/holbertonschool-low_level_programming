@@ -11,25 +11,24 @@
  */
 int _strcmp(char *s1, char *s2)
 {
+	int difference;
+
 	while (true)
 	{
-		while (*s1 == *s2)
+		difference = *s1 - *s2;
+		if (difference > 0)
 		{
-			s1++;
-			s2++;
+			return (difference);
 		}
-		if (*s1 > *s2)
+		else if (difference < 0)
 		{
-			return (*s1 - *s2);
-		}
-		else if (*s1 < *s2)
-		{
-			return (*s1 - *s2);
+			return (difference);
 		}
 		else
 		{
 			return (0);
 		}
+		s1++;
+		s2++;
 	}
-	return (0);
 }
