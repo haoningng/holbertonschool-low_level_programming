@@ -12,7 +12,8 @@
 char *cap_string(char *str)
 {
 	int i, cap;
-	char separators[] = {' ', '\t', '\n', ',', ':', '.', '!', '?', '"', '(', ')', '{', '}'};
+	char separators[] = {' ', '\t', '\n', ',', ':', '.', '!', '?',
+		'"', '(', ')', '{', '}'};
 	char *new_str = str;
 
 	cap = 1;
