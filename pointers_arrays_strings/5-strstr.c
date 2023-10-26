@@ -23,11 +23,6 @@ char *_strstr(char *haystack, char *needle)
 				match++;
 				break;
 			}
-			else
-			{
-				match = 0;
-				break;
-			}
 		}
 		if (match == len)
 		{
