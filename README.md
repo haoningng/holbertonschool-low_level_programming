@@ -8,5 +8,9 @@ These are my projects in C, completed as part of my Full Stack Software Engineer
 * [Makefiles](makefiles/)
 * [More Functions, Nested Loops](more_functions_nested_loops/)
 * [Pointers, Arrays and Strings](pointers_arrays_strings/)
-* [More Pointers, Arrays and Strings](more_pointers_arrays_strings/)
-* [Even More Pointers, Arrays and Strings](even_more_pointers_arrays_strings)
+* [More Pointers, Arrays and Strings](pointers_arrays_strings/)
+* [Even More Pointers, Arrays and Strings](pointers_arrays_strings)
+
+## Requirements:
+* C
+* Text editor (V/Vim, Emacs)
