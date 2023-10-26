@@ -8,13 +8,14 @@
  */
 void print_triangle(int size)
 {
-	int i, j, k, space, block = 0;
+	int i, j, k, space;
+	int block = 0;
 
 	if (size > 0)
 	{
 		for (i = 0; i < size; i++)
 		{
-			space = size - (i + 1);
+			space = size - (i + 1); /* e.g. If size = 1; space = 0 */
 			block++;
 			for (k = 0; k < space; k++)
 			{
