@@ -10,7 +10,7 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, match;
+	int i, match, previous_match;;
 	int len = strlen(needle);
 
 	while (*haystack)
@@ -21,7 +21,19 @@ char *_strstr(char *haystack, char *needle)
 			if (*haystack == needle[i])
 			{
 				match++;
+				previous_match = 1;
 				break;
+			}
+			else
+			{
+				previous_match = 0;
+			}
+		}
+		if (match > 0)
+		{
+			if (previous_match = 0)
+			{
+				match = 0;
 			}
 		}
 		if (match == len)
