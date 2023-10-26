@@ -20,7 +20,7 @@ char *_strstr(char *haystack, char *needle)
 		{
 			if (*haystack == needle[i])
 			{
-				match = 1;
+				match++;
 				break;
 			}
 			else
@@ -29,7 +29,7 @@ char *_strstr(char *haystack, char *needle)
 				break;
 			}
 		}
-		if (match == 1)
+		if (match == len)
 		{
 			return (haystack - len);
 		}
