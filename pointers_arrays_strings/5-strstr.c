@@ -32,7 +32,7 @@ char *_strstr(char *haystack, char *needle)
 		{
 			return (haystack - len);
 		}
-		s++;
+		haystack++;
 	}
 	return (NULL);
 }
