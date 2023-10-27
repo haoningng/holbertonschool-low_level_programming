@@ -37,7 +37,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 		if (match == len) /* 1 extra '\0' character at the end */
 		{
-			return (haystack - len);
+			return (haystack - (len - 1));
 		}
 		haystack++;
 	}
