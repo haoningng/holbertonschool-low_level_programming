@@ -13,6 +13,10 @@ char *_strstr(char *haystack, char *needle)
 	int i, match, previous_match;
 	int len = strlen(needle);
 
+	if (len == 0)
+	{
+		return (haystack);
+	}
 	while (*haystack)
 	{
 		for (i = 0; i < len; i++)
@@ -40,10 +44,6 @@ char *_strstr(char *haystack, char *needle)
 			return (haystack - (len - 1));
 		}
 		haystack++;
-	}
-	if (len == 0)
-	{
-		return (NULL);
 	}
 	return (NULL);
 }
