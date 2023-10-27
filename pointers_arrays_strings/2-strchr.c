@@ -7,7 +7,7 @@
  *
  * Return: pointer to the 1st occurence of char c in str s / NULL if not found
  */
-char *_strchr(char *s, char c)
+char *_strchr(const char *s, char c)
 {
 	while (*s)
 	{
