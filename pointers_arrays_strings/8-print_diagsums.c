@@ -20,15 +20,15 @@ void print_diagsums(int *a, int size)
 		{
 			if (j == sum_int1)
 			{
-				total1 += a[i][j];
+				total1 += *(a + (i * size + sum_int1));
 			}
 			if (j == sum_int2)
 			{
-				total2 += a[i][j];
+				total2 += *(a + (i * size + sum_int2));
 			}
 		}
-		sum_int1++
+		sum_int1++;
 		sum_int2--;
 	}	
-	printf("%i, %i", total1, total2);
+	printf("%i, %i\n", total1, total2);
 }
