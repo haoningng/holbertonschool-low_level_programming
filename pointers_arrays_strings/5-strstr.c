@@ -35,11 +35,15 @@ char *_strstr(char *haystack, char *needle)
 				match = 0;
 			}
 		}
-		if (match == len) /* 1 extra '\0' character at the end */
+		if (match == len)
 		{
 			return (haystack - (len - 1));
 		}
 		haystack++;
+	}
+	if (len == 0)
+	{
+		return (NULL);
 	}
 	return (NULL);
 }
