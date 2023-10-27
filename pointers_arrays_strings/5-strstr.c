@@ -29,14 +29,14 @@ char *_strstr(char *haystack, char *needle)
 				previous_match = 0;
 			}
 		}
-		if (match > 0)
+		if (match > 0) /* if char doesn't match after a matching char, reset match */
 		{
 			if (previous_match == 0)
 			{
 				match = 0;
 			}
 		}
-		if (match == len)
+		if (match == (len - 1)) /* 1 extra '\0' character at the end */
 		{
 			return (haystack - len);
 		}
