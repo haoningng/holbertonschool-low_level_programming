@@ -16,7 +16,7 @@ char *_strstr(char *haystack, char *needle)
 	while (*haystack)
 	{
 		match = 0;
-		for (i = 0; i < len; i++)
+		for (i = 0; i < (len - 1); i++)
 		{
 			if (*haystack == needle[i])
 			{
@@ -38,7 +38,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 		if (match == (len - 1)) /* 1 extra '\0' character at the end */
 		{
-			return (haystack - len);
+			return (haystack - (len - 1));
 		}
 		haystack++;
 	}
