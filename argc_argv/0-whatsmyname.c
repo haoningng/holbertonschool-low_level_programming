@@ -1,23 +1,14 @@
 #include "main.h"
 #include <stdio.h>
 
-#ifdef UNUSED
-#elif defined(__GNUC__)
-# define UNUSED(x) UNUSED_ ## x __attribute__((unused))
-#elif defined(__LCLINT__)
-# define UNUSED(x) /* @unused@ */ x
-#else
-# define UNUSED(x) x
-#endif
-
 /**
- * mynameis - prints the program's name, followed by a new line.
+ * mynameis - prints the program's name, followed by a new line
  * @argc: count of the arguments supplied to the program
  * @argv: an array of pointers to the strings which are those arguments
  *
  * Return: Nothing.
  */
-void mynameis(int UNUSED(argc), char *argv[])
+void mynameis(int __attribute__((unused)) argc, char *argv[])
 {
 	printf("%s", argv[0]);
 }
