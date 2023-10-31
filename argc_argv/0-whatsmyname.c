@@ -6,10 +6,11 @@
  * @argc: count of the arguments supplied to the program
  * @argv: an array of pointers to the strings which are those arguments
  *
- * Return: Nothing.
+ * Return: 0 if successful.
  */
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	(void)argc;
 	printf("%s\n", argv[0]);
+	return (0);
 }
