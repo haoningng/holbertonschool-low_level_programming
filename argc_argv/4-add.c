@@ -14,7 +14,7 @@
 int main(int argc, char *argv[])
 {
 	int i, sum = 0;
-	long unsigned int j;
+	unsigned long j;
 
 	if (argc == 1)
 	{
