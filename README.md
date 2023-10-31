@@ -9,7 +9,10 @@ These are my projects in C, completed as part of my Full Stack Software Engineer
 * [More Functions, Nested Loops](more_functions_nested_loops/)
 * [Pointers, Arrays and Strings](pointers_arrays_strings/)
 * [More Pointers, Arrays and Strings](pointers_arrays_strings/)
-* [Even More Pointers, Arrays and Strings](pointers_arrays_strings)
+* [Even More Pointers, Arrays and Strings](pointers_arrays_strings/)
+* [Recursion](recursion/)
+* [Static Libraries](static_libraries/)
+* [argc, argv](argc_argv/)
 
 ## Requirements:
 * C
