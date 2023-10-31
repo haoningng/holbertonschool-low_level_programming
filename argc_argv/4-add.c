@@ -13,7 +13,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	int i, sum = 0;
 	long unsigned int j;
 
 	if (argc == 1)
@@ -32,8 +32,8 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
-		i += atoi(argv[i]);
+		sum += atoi(argv[i]);
 	}
-	printf("%d\n", i);
+	printf("%d\n", sum);
 	return (0);
 }
