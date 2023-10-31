@@ -8,7 +8,8 @@
  *
  * Return: Nothing.
  */
-void mynameis(int __attribute__((unused)) argc, char *argv[])
+void mynameis(int argc, char *argv[])
 {
+	(void)argc;
 	printf("%s", argv[0]);
 }
