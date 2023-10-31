@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -17,7 +18,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	i = argv[1] * argv[2];
+	i = atoi(argv[1]) * atoi(argv[2]);
 	printf("%d\n", i);
 	return (0);
 }
