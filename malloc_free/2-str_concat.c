@@ -16,7 +16,11 @@ char *str_concat(char *s1, char *s2)
 	char *array;
 	int size1, size2;
 
-	if (s1 == NULL)
+	if (s1 == NULL && s2 == NULL)
+	{
+		return (NULL);
+	}
+	else if (s1 == NULL)
 	{
 		s1 = "";
 	}
