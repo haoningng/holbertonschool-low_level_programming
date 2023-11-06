@@ -13,7 +13,8 @@ These are my projects in C, completed as part of my Full Stack Software Engineer
 * [Recursion](recursion/)
 * [Static Libraries](static_libraries/)
 * [argc, argv](argc_argv/)
-* [malloc, free](malloc_free)
+* [malloc, free](malloc_free/)
+* [More malloc, free](more_malloc_free/)
 
 ## Requirements:
 * C
