@@ -15,7 +15,7 @@ char *_strdup(char *str)
 	char *array;
 	int size = strlen(str);
 
-	if (*str == NULL)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
