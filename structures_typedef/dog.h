@@ -1,3 +1,7 @@
+#ifndef HEADER
+
+#define HEADER
+
 /**
  * struct dog - this represents a dog
  * @name: string representing its name
@@ -12,3 +16,5 @@ struct dog
 	float age;
 	char *owner;
 };
+
+#endif
