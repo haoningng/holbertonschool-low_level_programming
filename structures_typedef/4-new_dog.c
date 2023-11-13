@@ -17,12 +17,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *n;
 	char *o;
 
-	n = malloc(sizeof(name));
+	n = malloc(sizeof(name) + 1);
 	if (n == NULL)
 	{
 		return (NULL);
 	}
-	o = malloc(sizeof(owner));
+	o = malloc(sizeof(owner) + 1);
 	if (o == NULL)
 	{
 		free(n);
