@@ -17,6 +17,7 @@ These are my projects in C, completed as part of my Full Stack Software Engineer
 * [More malloc, free](more_malloc_free/)
 * [Preprocessor](preprocessor/)
 * [Structures, Typedef](structures_typedef/)
+* [Function Pointers](function_pointers/)
 
 ## Requirements:
 * C
