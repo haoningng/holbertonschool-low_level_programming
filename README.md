@@ -18,6 +18,7 @@ These are my projects in C, completed as part of my Full Stack Software Engineer
 * [Preprocessor](preprocessor/)
 * [Structures, Typedef](structures_typedef/)
 * [Function Pointers](function_pointers/)
+* [Variadic Functions](variadic_functions/)
 
 ## Requirements:
 * C
