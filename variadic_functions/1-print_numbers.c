@@ -25,12 +25,16 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			{
 				printf("%d", element);
 			}
-			printf("%d%s", element, separator);
+			else
+			{
+				printf("%d%s", element, separator);
+			}
 		}
 		else
 		{
-			printf("%d\n", element);
+			printf("%d", element);
 		}
 	}
 	va_end(ap);
+	printf("\n");
 }
