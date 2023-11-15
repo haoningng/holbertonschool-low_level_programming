@@ -72,7 +72,7 @@ void print_all(const char * const format, ...)
 	};
 	va_start(args, format);
 	i = 0;
-	while (format[i] && format)
+	while (format && format[i])
 	{
 		j = 0;
 		while (arg_formats[j].format_type)
