@@ -49,6 +49,7 @@ void print_str(va_list args)
 	char *str;
 
 	str = va_arg(args, char*);
+	/* Check if the string is NULL, print (nil) if yes */
 	str != NULL ? printf("%s", str) : printf("(nil)");
 }
 
@@ -63,6 +64,7 @@ void print_all(const char * const format, ...)
 	int i, j;
 	va_list args;
 
+	/* struct array here because checker doesn't allow global variable */
 	print_type arg_formats[] = {
 		{'c', print_char},
 		{'i', print_int},
@@ -72,14 +74,17 @@ void print_all(const char * const format, ...)
 	};
 	va_start(args, format);
 	i = 0;
+	/* Check if format is NULL and whether we have reached '\0' */
 	while (format && format[i])
 	{
 		j = 0;
+		/* Check if we have reached '\0' in arg_format.format_type */
 		while (arg_formats[j].format_type)
 		{
 			if (arg_formats[j].format_type == format[i])
 			{
 				arg_formats[j].f(args);
+				/* only print comma if it's not last char */
 				if (format[i + 1])
 				{
 					printf(", ");
