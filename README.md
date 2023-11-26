@@ -19,6 +19,7 @@ These are my projects in C, completed as part of my Full Stack Software Engineer
 * [Structures, Typedef](structures_typedef/)
 * [Function Pointers](function_pointers/)
 * [Variadic Functions](variadic_functions/)
+* [Singly Linked Lists](singly_linked_lists/)
 
 ## Requirements:
 * C
