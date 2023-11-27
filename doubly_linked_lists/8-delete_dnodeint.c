@@ -62,7 +62,7 @@ int delete_dnodeint_at_start(dlistint_t **head)
 {
 	dlistint_t *ptr;
 
-	if (!(*head))
+	if ((*head) == NULL)
 		return (-1);
 	ptr = *head;
 	ptr = ptr->next;
