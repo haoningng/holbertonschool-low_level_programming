@@ -20,6 +20,7 @@ These are my projects in C, completed as part of my Full Stack Software Engineer
 * [Function Pointers](function_pointers/)
 * [Variadic Functions](variadic_functions/)
 * [Singly Linked Lists](singly_linked_lists/)
+* [Doubly Linked Lists](doubly_linked_lists/)
 
 ## Requirements:
 * C
