@@ -14,6 +14,8 @@ unsigned int binary_to_uint(const char *b)
 	int strlength, i;
 	unsigned int integer, converted_int, base, multiplier;
 
+	if (b == NULL)
+		return (0);
 	strlength = strlen(b);
 	integer = converted_int = 0;
 	multiplier = base = 2;
