@@ -27,6 +27,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		if (index > count)
 			return (-1);
 	}
+	else
+	{
+		return (-1);
+	}
 	ptr = *head;
 	if (index == 0)
 	{
