@@ -21,6 +21,7 @@ These are my projects in C, completed as part of my Full Stack Software Engineer
 * [Variadic Functions](variadic_functions/)
 * [Singly Linked Lists](singly_linked_lists/)
 * [Doubly Linked Lists](doubly_linked_lists/)
+* [Bit Manipulation](bit_manipulation/)
 
 ## Requirements:
 * C
