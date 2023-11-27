@@ -3,6 +3,7 @@
 #include "lists.h"
 
 int delete_dnodeint_at_start(dlistint_t **head);
+int delete_dnodeint_at_end(dlistint_t **head);
 
 /**
  * delete_dnodeint_at_index - deletes the node at index of a list
@@ -36,6 +37,11 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		if (delete_dnodeint_at_start(&(*head)) == -1)
 			return (-1);
+		return (1);
+	}
+	if (index == count)
+	{
+		delete_dnodeint_at_end(&(*head));
 		return (1);
 	}
 	for (count = 0; count < index - 1; count++)
@@ -73,5 +79,21 @@ int delete_dnodeint_at_start(dlistint_t **head)
 		*head = ptr;
 	if (ptr == NULL)
 		*head = NULL;
+	return (1);
+}
+
+/**
+ * delete_dnodeint_at_end - deletes the node at end of a list
+ * @head: pointer to pointer to a linked list
+ *
+ * Return: 1 if succeeded -1 if not
+ */
+int delete_dnodeint_at_end(dlistint_t **head)
+{
+	dlistint_t *ptr;
+
+	ptr = (*head)->next;
+	free(ptr);
+	(*head)->next = NULL;
 	return (1);
 }
