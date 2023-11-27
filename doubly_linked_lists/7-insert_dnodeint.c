@@ -27,13 +27,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		count++;
 	}
-	if (idx == count)
+	if (idx == count && idx == count + 1)
 	{
 		*h = add_dnodeint_end(&(*h), n);
 		ptr = ptr->next;
 		return (ptr);
 	}
-	if (idx > count)
+	if (idx > count + 1)
 		return (NULL);
 	ptr = ptr2 = *h;
 	for (count = 0; count < idx; count++)
