@@ -19,7 +19,7 @@ int get_bit(unsigned long int n, unsigned int index)
 
 	str = convert_to_bit(n);
 	if (index > strlen(str))
-		return (0);
+		return (-1);
 	for (i = 0; i < strlen(str); i++)
 	{
 		if (i == index)
