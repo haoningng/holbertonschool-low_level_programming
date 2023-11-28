@@ -25,7 +25,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		if (i == index)
 			return (str[i] - '0');
 	}
-	return (-1);
+	return (0);
 }
 
 /**
