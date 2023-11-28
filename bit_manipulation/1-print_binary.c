@@ -11,32 +11,36 @@
  */
 void print_binary(unsigned long int n)
 {
-	char *string;
-	int quotient, remainder, i, strlength;
-	unsigned int base;
+	int leading_zero, i, compare;
+	unsigned long int bitmask;
 
-	string = malloc(15 * sizeof(char));
-	if (string == NULL)
-		free(string);
-	base = 2;
-	quotient = n;
-	i = 0;
-	if (quotient == 0)
+	if (n == 0)
 		_putchar('0');
-	while (quotient > 0)
+	leading_zero = 1; /* keep track of leading zeroes in n */
+	bitmask = 1 << 31; /* for 32-bit machine */
+	for (i = 0; i < 32; i++)
 	{
-		remainder = quotient % base;
-		if (remainder == 1)
-			string[i] = '1';
-		if (remainder != 1)
-			string[i] = '0';
-		i++;
-		quotient = (quotient - remainder) / base;
+		/* use '&' to find the first non-zero binary in n */
+		/**
+		 * eg compare = n & bitmask
+		 * 1000 0000 (bitmask)
+		 * 0000 0001 (n)
+		 * result: 0000 0000 (compare = 0)
+		 */
+		compare = n & bitmask;
+		if (compare != 0 && leading_zero == 1)
+		{
+			/* as soon as the first non-zero is found in n */
+			/* change leading_zero to 0 */
+			leading_zero = 0;
+		}
+		if (leading_zero == 0)
+		{
+			if (compare != 0)
+				_putchar('1');
+			if (compare == 0)
+				_putchar('0');
+		}
+		n = n << 1; /* move to next digit in n */
 	}
-	strlength = strlen(string);
-	for (i = strlength - 1; i >= 0; i--)
-	{
-		_putchar(string[i]);
-	}
-	free(string);
 }
