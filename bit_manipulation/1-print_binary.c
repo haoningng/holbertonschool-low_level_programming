@@ -17,8 +17,8 @@ void print_binary(unsigned long int n)
 	if (n == 0)
 		_putchar('0');
 	leading_zero = 1; /* keep track of leading zeroes in n */
-	bitmask = 1 << 31; /* for 32-bit machine */
-	for (i = 0; i < 32; i++)
+	bitmask = 1 << 64; /* for 64-bit machine */
+	for (i = 0; i < 64; i++)
 	{
 		/* use '&' to find the first non-zero binary in n */
 		/**
