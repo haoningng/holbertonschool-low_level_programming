@@ -6,14 +6,14 @@
  * insert_dnodeint_at_index - inserts a new node at a given position
  * @h: pointer to pointer to dlistint_t list
  * @idx: index of the list where the new node should be added
- * @n: integer value of the new node
+ * @n: integer vaalue of the new node
  *
  * Return: address of the new element or NULL if it failed
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new;
-	dlistint_t *ptr;
+	dlistint_t *ptr = *h;
 	dlistint_t *ptr2;
 	unsigned int count;
 
@@ -22,21 +22,20 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = add_dnodeint(&(*h), n);
 		return (*h);
 	}
-	count = 0;
-	for (ptr = *h; ptr->next != NULL; ptr = ptr->next)
+	for (count = 0; count < idx; count++)
 	{
-		count++;
+		if (ptr->next == NULL)
+			return (NULL);
+		ptr = ptr->next;
 	}
-	if (idx == count && idx == count + 1)
+	if (ptr->next == NULL)
 	{
 		*h = add_dnodeint_end(&(*h), n);
 		ptr = ptr->next;
-		return (ptr);
+		return (*h);
 	}
-	if (idx > count + 1)
-		return (NULL);
 	ptr = ptr2 = *h;
-	for (count = 0; count < idx; count++)
+	for (count = 0; count < idx - 1; count++)
 	{
 		ptr = ptr->next;
 		ptr2 = ptr2->next;
