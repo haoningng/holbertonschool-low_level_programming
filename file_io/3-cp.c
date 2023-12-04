@@ -32,7 +32,12 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 	buffer = malloc(sizeof(char) * 3000);
-	fd1 = creat(argv[2], S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	fd1 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	if (fd1 == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
 	cnt = read(fd, buffer, READ_SIZE);
 	while (cnt > 0)
 	{
@@ -43,11 +48,6 @@ int main(int argc, char **argv)
 			exit(99);
 		}
 		cnt = read(fd, buffer, READ_SIZE);
-	}
-	if (cnt < -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file test_folder/textfile_0\n");
-		exit(98);
 	}
 	if (close(fd) == -1)
 	{
