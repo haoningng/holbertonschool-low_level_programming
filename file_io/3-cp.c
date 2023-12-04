@@ -32,8 +32,6 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 	buffer = malloc(sizeof(char) * 3000);
-	if (buffer == NULL)
-		return (98);
 	fd1 = creat(argv[2], S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	cnt = read(fd, buffer, READ_SIZE);
 	while (cnt > 0)
@@ -46,13 +44,16 @@ int main(int argc, char **argv)
 		}
 		cnt = read(fd, buffer, READ_SIZE);
 	}
-	res = close(fd);
-	if (res == -1)
+	if (cnt < -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file test_folder/textfile_0\n");
+		exit(98);
+	}
+	if (close(fd) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd);
 		exit(100);
 	}
-	close(fd);
 	close(fd1);
 	free(buffer);
 	return (0);
