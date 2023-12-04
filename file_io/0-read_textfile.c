@@ -8,7 +8,7 @@
 #include "main.h"
 
 /**
- * read_text - reads a text file and prints it to the POSIX stdout
+ * read_textfile - reads a text file and prints it to the POSIX stdout
  * @filename: name of the file to be read
  * @letters: number of letters it should read and print
  *
@@ -33,7 +33,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		free(buffer);
 		close(fd);
-		return(0);
+		return (0);
 	}
 	buffer[cnt] = '\0';
 	sz = write(STDOUT_FILENO, buffer, cnt);
