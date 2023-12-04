@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 	buffer = malloc(sizeof(char) * strlen(argv[1]));
 	if (buffer == NULL)
 		return (98);
-	cnt = read(fd, buffer, strlen(iargv[1]));
+	cnt = read(fd, buffer, strlen(argv[1]));
 	if (cnt < 0)
 	{
 		dprintf(2, "Error1: Can't read from file %s\n", argv[1]);
