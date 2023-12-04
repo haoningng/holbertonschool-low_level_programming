@@ -17,7 +17,7 @@
  */
 int main(int argc, char **argv)
 {
-	int fd, fd1, cnt, res;
+	int fd, fd1, cnt, res, READ_SIZE = 1024;
 	char *buffer;
 
 	if (argc != 3)
@@ -28,29 +28,28 @@ int main(int argc, char **argv)
 	fd = open(argv[1], O_RDONLY);
 	if (fd < 0)
 	{
-		dprintf(1, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	buffer = malloc(sizeof(char) * 3000);
 	if (buffer == NULL)
 		return (98);
-	cnt = read(fd, buffer, 3000);
-	if (cnt < 0)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
 	fd1 = creat(argv[2], S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
-	res = write(fd1, buffer, cnt);
-	if (res != cnt)
+	cnt = read(fd, buffer, READ_SIZE);
+	while (cnt > 0)
 	{
-		dprintf(2, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
+		res = write(fd1, buffer, cnt);
+		if (res != cnt)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
+		cnt = read(fd, buffer, READ_SIZE);
 	}
 	res = close(fd);
 	if (res == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd);
 		exit(100);
 	}
 	close(fd);
