@@ -39,7 +39,7 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 	cnt = read(fd, buffer, READ_SIZE);
-	while (cnt != 0)
+	while (cnt > 0)
 	{
 		res = write(fd1, buffer, cnt);
 		if (res == -1)
@@ -49,9 +49,9 @@ int main(int argc, char **argv)
 		}
 		cnt = read(fd, buffer, READ_SIZE);
 	}
-	if (close(fd) == -1 || cnt == -1)
+	if (close(fd) == -1 || close(fd1) || cnt == -1)
 	{
-		dprintf(STDERR_FILENO, cnt == -1 ? r : c, argv[1]);
+		dprintf(STDERR_FILENO, cnt == -1 ? r : c, cnt == -1 ? argv[1] : '\0');
 		exit(cnt == -1 ? 98 : 100);
 	}
 	return (0);
