@@ -24,8 +24,17 @@ int create_file(const char *filename, char *text_content)
 	if (fd < 0)
 		return (-1);
 	fchmod(fd, S_IRUSR | S_IWUSR);
-	cnt = write(fd, text_content, strlen(text_content));
-	if (cnt < 0)
-		return (-1);
+	if (text_content != NULL)
+	{
+		cnt = write(fd, text_content, strlen(text_content));
+		if (cnt < 0)
+			return (-1);
+	}
+	else
+	{
+		cnt = write(fd, "", 1);
+		if (cnt < 0)
+			return (-1);
+	}
 	return (1);
 }
