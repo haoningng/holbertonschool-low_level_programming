@@ -18,7 +18,7 @@
 int main(int argc, char **argv)
 {
 	int fd, fd1, cnt, res, READ_SIZE = 1024;
-	char *buffer;
+	char buffer[1024];
 
 	if (argc != 3)
 	{
@@ -31,7 +31,6 @@ int main(int argc, char **argv)
 		dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	buffer = malloc(sizeof(char) * 3000);
 	fd1 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd1 == -1)
 	{
@@ -39,15 +38,20 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 	cnt = read(fd, buffer, READ_SIZE);
-	while (cnt > 0)
+	while (cnt != 0)
 	{
 		res = write(fd1, buffer, cnt);
-		if (res != cnt)
+		if (res == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 		cnt = read(fd, buffer, READ_SIZE);
+	}
+	if (cnt == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 	if (close(fd) == -1)
 	{
@@ -55,6 +59,5 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 	close(fd1);
-	free(buffer);
 	return (0);
 }
