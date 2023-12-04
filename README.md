@@ -23,6 +23,7 @@ These are my projects in C, completed as part of my Full Stack Software Engineer
 * [Doubly Linked Lists](doubly_linked_lists/)
 * [Bit Manipulation](bit_manipulation/)
 * [File I/O](file_io/)
+* [Hash Tables](hash_tables/)
 
 ## Requirements:
 * C
