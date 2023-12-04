@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 28);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	fd = open(argv[1], O_RDONLY);
@@ -49,7 +49,7 @@ int main(int argc, char **argv)
 		}
 		cnt = read(fd, buffer, READ_SIZE);
 	}
-	if (cnt == -1 || close(fd) == -1)
+	if (close(fd) == -1 || cnt == -1)
 	{
 		dprintf(STDERR_FILENO, cnt == -1 ? r : c, argv[1]);
 		exit(cnt == -1 ? 98 : 100);
