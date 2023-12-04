@@ -31,10 +31,10 @@ int main(int argc, char **argv)
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	buffer = malloc(sizeof(char) * strlen(argv[1]));
+	buffer = malloc(sizeof(char) * 1686);
 	if (buffer == NULL)
 		return (98);
-	cnt = read(fd, buffer, strlen(argv[1]));
+	cnt = read(fd, buffer,1686);
 	if (cnt < 0)
 	{
 		dprintf(2, "Error1: Can't read from file %s\n", argv[1]);
