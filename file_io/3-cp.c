@@ -35,8 +35,8 @@ int main(int argc, char **argv)
 	fd1 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd1 == -1)
 	{
-		dprintf(STDERR_FILENO, r, argv[2]);
-		exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
 	}
 	cnt = read(fd, buffer, READ_SIZE);
 	while (cnt != 0)
