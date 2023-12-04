@@ -31,13 +31,13 @@ int main(int argc, char **argv)
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	buffer = malloc(sizeof(char) * 1686);
+	buffer = malloc(sizeof(char) * 3000);
 	if (buffer == NULL)
 		return (98);
-	cnt = read(fd, buffer,1686);
+	cnt = read(fd, buffer, 3000);
 	if (cnt < 0)
 	{
-		dprintf(2, "Error1: Can't read from file %s\n", argv[1]);
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	fd1 = creat(argv[2], S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
@@ -53,5 +53,8 @@ int main(int argc, char **argv)
 		dprintf(2, "Error: Can't close fd %d", fd);
 		exit(100);
 	}
+	close(fd);
+	close(fd1);
+	free(buffer);
 	return (1);
 }
