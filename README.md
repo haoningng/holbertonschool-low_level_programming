@@ -22,6 +22,7 @@ These are my projects in C, completed as part of my Full Stack Software Engineer
 * [Singly Linked Lists](singly_linked_lists/)
 * [Doubly Linked Lists](doubly_linked_lists/)
 * [Bit Manipulation](bit_manipulation/)
+* [File I/O](file_io/)
 
 ## Requirements:
 * C
