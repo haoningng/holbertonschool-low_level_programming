@@ -36,10 +36,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(new_node);
 		return (0);
 	}
-	new_node->next = NULL;
 	new_node->key = (char *)key;
 	new_node->value = (char *)value;
 	index = key_index((const unsigned char *)key, 1024);
+	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
 	return (1);
 }
