@@ -39,14 +39,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node->key = (char *)key;
 	new_node->value = (char *)value;
 	index = key_index((const unsigned char *)key, ht->size);
-	if (strcmp(new_node->key, ht->array[index]->key) == 0)
-	{
-		new_node->next = NULL;
-	}
-	else
-	{
-		new_node->next = ht->array[index];
-	}
+	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
 	return (1);
 }
