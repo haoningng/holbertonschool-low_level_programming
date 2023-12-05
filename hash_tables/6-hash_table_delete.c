@@ -35,7 +35,6 @@ void hash_table_delete(hash_table_t *ht)
 				break;
 			node_pointer2 = node_pointer2->next;
 		}
-		free(ht->array[index]);
 		index++;
 	}
 	free(ht->array);
